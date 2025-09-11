@@ -1,4 +1,4 @@
-from loginmod.asgi import application
+from loginmod.wsgi import application
 
-async def app(scope, receive, send):
-    await application(scope, receive, send)
+# Vercel looks for this
+handler = application

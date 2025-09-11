@@ -2,14 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "wsgi.py",
+      "src": "loginmod/api/index.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "wsgi.py"
+      "dest": "loginmod/api/index.py"
     }
   ]
 }
