@@ -1,3 +1,5 @@
-from loginmod.wsgi import application
-
-handler = application
+def handler(event, context):
+    return {
+        "statusCode": 200,
+        "body": "Hello from Vercel Python!"
+    }
