@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "loginmod/api/index.py",
+      "src": "loginmod/asgi.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "loginmod/api/index.py"
+      "dest": "loginmod/asgi.py"
     }
   ]
 }
